@@ -13,6 +13,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Install ninja
+      run: sudo apt-get update && sudo apt-get install ninja-build
+
     - name: Create Build Environment
       run: cmake -E make_directory ${{runner.workspace}}/build
 
