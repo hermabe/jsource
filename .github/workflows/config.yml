@@ -2,9 +2,6 @@ name: Build & Test
 
 on: [push]
 
-env:
-  BUILD_TYPE: Release
-
 jobs:
   build:
 
@@ -22,13 +19,13 @@ jobs:
     - name: Configure CMake
       shell: bash
       working-directory: ${{runner.workspace}}/build
-      run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE -G "Ninja Multi-Config" -B ${{runner.workspace}}/build  
+      run: cmake $GITHUB_WORKSPACE -G "Ninja Multi-Config" -B ${{runner.workspace}}/build  
 
     - name: Build
       shell: bash
-      run: ninja -j12 -C build
+      run: ninja -j12 -C ${{runner.workspace}}/build
 
     - name: Test
       working-directory: ${{runner.workspace}}/build
       shell: bash
-      run: ctest -C $BUILD_TYPE
+      run: ctest -j12 -C Debug
