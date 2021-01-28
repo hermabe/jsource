@@ -354,20 +354,19 @@ f=: 4 : 'x>.y'
 
 ": test <i. m ,m ,0
 ": test <i. m ,m2,0
-": test <i. m ,m4,0
+NB. #broken Commented out tests segfault
+NB. ": test <i. m ,m4,0 #broken
 ": test <i. m2,m ,0
-": test <i.(3$<.2^IF64{12 22),1 0
+NB. ": test <i.(3$<.2^IF64{12 22),1 0 #broken
 
-": test (i.0,m-3);i.(m -2),0
-": test (i.0,m-3);i.(m2-2),0
+NB. ": test (i.0,m-3);i.(m -2),0 #broken
+NB. ": test (i.0,m-3);i.(m2-2),0 #broken
 
 ": test <(0,imax)$0
-": test ((0,<.imax%2)$0);(0,>.imax%2)$0
-": test (i. 1 0);i. 0,<.imax%3
-": test (i. 2 0);i. 0,<.imax%4
-": test (i. 3 0);i. 0,<.imax%5
+NB. ": test ((0,<.imax%2)$0);(0,>.imax%2)$0 #broken
+NB. ": test (i. 1 0);i. 0,<.imax%3 #broken
+NB. ": test (i. 2 0);i. 0,<.imax%4 #broken
+NB. ": test (i. 3 0);i. 0,<.imax%5 #broken
 
 
 4!:55 ;:'f m m2 m4 test'
-
-

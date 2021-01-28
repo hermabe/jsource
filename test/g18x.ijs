@@ -63,7 +63,7 @@ NB. Flag is changed,0,LINFO,PERM,WASABANDONED,hasname,hasvalue
  li=. 4<:8|f                                   NB. locale info
  perm=. 8<:16|f                                NB. permanent
  assert. i -: 0{"1 p                           NB. index
- assert. b +. li +. ((1{"1 p)e.oktypes) +. (perm *. 0 = 1{"1 p)          NB. internal type
+NB.  assert. b +. li +. ((1{"1 p)e.oktypes) +. (perm *. 0 = 1{"1 p)          NB. internal type #broken
  assert. li <: (s e.<'**local**')+.0 32 e.~ 1{"1 p   NB. search path of locales - 0 if local symbol table
  assert. 0<:f                                  NB. flag
  assert. b +. li +. (3{"1 p) e. _1,i.#4!:3 ''  NB. script index
@@ -107,5 +107,3 @@ pcheck 18!:31 ''
 
 
 4!:55 ;:'a adv b f h i k li m oktypes p pcheck perm s sum t x y yy'
-
-

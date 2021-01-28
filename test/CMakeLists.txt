@@ -99,7 +99,7 @@ set(test_cases
     g132
     g13x
     g15x
-  # g18x
+    g18x # broken
     g1x
     g1x0
     g1x1
@@ -123,7 +123,7 @@ set(test_cases
     g202
     g202b
     g210
-    # g210a segfault #broken 
+    g210a # #broken segfault
     g211
     g212
     g220
@@ -162,7 +162,7 @@ set(test_cases
     g330
     g330f
     g330t
-    # g331 segfault #broken
+    g331 # segfault #broken
     g331bx
     g331col
     g331ins
@@ -204,7 +204,7 @@ set(test_cases
     g422sort
     g422sort1
     g422tao
-    # g430
+    g430
     g430a2
     g430avg
     g430b

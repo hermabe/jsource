@@ -79,10 +79,10 @@ yy =: y
 
 NB. #broken have no idea about this one though
 
-NB. assert. (+/ #/.~ y) = #y
+NB. assert. (+/ #/.~ y) = #y NB. Sum of tallies of unique elements is equal to tally
 assert. (#/.~ y) =&# ~.y
 assert. (+/ ~: y) = # ~. y
-NB. assert. (#/.~ /:~ y) -: 2 -~/\ I. 1 ,~ ~: /:~ y
+NB. assert. (#/.~ /:~ y) -: 2 -~/\ I. 1 ,~ ~: /:~ y NB. (tally of unique elements of ascending sorted y) match ... ascending sorted y
 assert. (~. y) -:!.0 (~: y) # y
 1
 )
@@ -102,5 +102,3 @@ test <"0 ] 2 j. 1+2e_14*i:20
 
 
 4!:55 ;:'b t test xx yy'
-
-
